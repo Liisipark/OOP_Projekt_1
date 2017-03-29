@@ -29,6 +29,11 @@ public class Töötaja {
     //meetod, mis saab argumendiks ette kuupäeva ja puhkuse kestuse ning tagastab pukuse perioodi
 
 
-    //
+    // //meetod, mis saab argumendiks ette kuupäeva ja puhkuse kestuse ning tagastab pukuse perioodi
+
+
+    // meetod, mis vähendab puhkuse jääki, kui puhkus on lisatud
+
+    // meetod, mis salvestab puhkuse listi
 
 }
