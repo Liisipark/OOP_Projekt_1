@@ -12,18 +12,22 @@ public class Sõidukirent {
         this.asutus = asutus;
     }
 
+    // Meetod, mis kontrollib, kas rendis on mõni auto saadaval
     public boolean kasSaadavalAuto(Sõiduk x){
         return "Auto".equals(x.getLiik());
     }
 
+    // Meetod, mis lisab saadaolevate sõidukite listi uue sõiduki
     public void lisaSõiduk(Sõiduk s){
         sõidukid_saadaval.add(s);
     }
 
+    // Meetod, mis väljastab saadaolevate sõidukite listi
     public List<Sõiduk> getSõidukid_saadaval() {
         return sõidukid_saadaval;
     }
 
+    // Meetod, mis väljastab broneeringute listi
     public ArrayList<Sõiduk> getBroneeringud() {
         return broneeringud;
     }
@@ -36,6 +40,7 @@ public class Sõidukirent {
         return "Jalgratas".equals(x.getLiik());
     }
 
+    // Meetodi sõiduki proneerimiseks kliendi poolt juhul kui sõiduk on saadaval
     public void broneeriAuto (Sõiduk x, Kliendid y){
         if (kasSaadavalAuto(x)) {
             sõidukid_saadaval.remove(x);
@@ -43,7 +48,10 @@ public class Sõidukirent {
         }
     }
 
-    public double allahindlusArvelt(Kliendid x) {return Math.round(Math.random()*99+1)*x.getArve()/100; } //arvutab juhusliku allhindluse arvelt
+    // Meetod, mis arvutab juhusliku allhindluse arvelt
+    public double allahindlusArvelt(Kliendid x) {
+        return Math.round(Math.random() * 99 + 1) * x.getArve() / 100;
+    }
 }
 
 

@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 
 public class Test_sõiduk {
     public static void main(String[] args) {
@@ -10,14 +9,22 @@ public class Test_sõiduk {
         Sõiduk auto1 = new Auto("Auto", "BMW", 150, 9.8, 2);
         Sõiduk auto2 = new Auto("Auto", "Opel", 50, 4.8, 4);
         Sõiduk auto3 = new Auto("Auto", "Nissan", 70, 6.8, 5);
+        Sõiduk roller1 = new Roller("Roller", "Vespa", 25, 1.2);
+        Sõiduk roller2 = new Roller("Roller", "Vespa2", 35, 1.9);
+        Sõiduk jalgratas1 = new Jalgratas("Jalgratas", "Scott", 10);
+        Sõiduk jalgratas2 = new Jalgratas("Jalgratas", "Trec", 50);
 
         ArrayList<Kliendid> kliendid = new ArrayList<>();
 
         test.lisaSõiduk(auto1);
         test.lisaSõiduk(auto2);
         test.lisaSõiduk(auto3);
+        test.lisaSõiduk(roller1);
+        test.lisaSõiduk(roller2);
+        test.lisaSõiduk(jalgratas1);
+        test.lisaSõiduk(jalgratas2);
 
-        //Collections.sort(Sõidukid_saadaval());
+        Collections.sort(test.getSõidukid_saadaval());
 
         for(Sõiduk sõiduk: test.getSõidukid_saadaval()){
             System.out.println(sõiduk);
@@ -34,11 +41,10 @@ public class Test_sõiduk {
         System.out.println(test.getSõidukid_saadaval());
         System.out.println(test.getBroneeringud());
 
+        System.out.println(jalgratas1.rendiMaksumus(5));
 
 
     }
-
-    //meetod, mis loeb failist sõidukid ja väljastab sõidukite listi;
 
 
 }

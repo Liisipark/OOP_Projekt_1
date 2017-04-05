@@ -1,3 +1,6 @@
+/*
+*Sõidukirendist saadavate sõidukite ülemklass
+ */
 
 abstract class Sõiduk implements Comparable<Sõiduk> {
     private String liik;
@@ -22,8 +25,10 @@ abstract class Sõiduk implements Comparable<Sõiduk> {
         return liik;
     }
 
+    // Meetod, mis arvutab ette antd vahemaa ja hinna korral sõiduki maksumuse
     abstract double sõiduMaksumus(int vahemaa, double hind);
 
+    // Meetod, mis arvutab ette antud rendipäevade põhjal rendi kogumaksumuse
     abstract int rendiMaksumus(int kestus);
 
     @Override
@@ -34,6 +39,7 @@ abstract class Sõiduk implements Comparable<Sõiduk> {
                 '}';
     }
 
+    // Sõidukite reastamine rendi_hinna alusel
     @Override
     public int compareTo(Sõiduk o) {
         if (this.rendi_hind > o.getRendi_hind()) {
