@@ -13,7 +13,6 @@ public class Auto extends Sõiduk {
         return kütusekulu;
     }
 
-
     @Override
     double sõiduMaksumus(int vahemaa, double hind) {
         return vahemaa/this.kütusekulu*hind;

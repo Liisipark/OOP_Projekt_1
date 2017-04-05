@@ -4,7 +4,7 @@ import java.util.List;
 public class Sõidukirent {
     private String asutus;
 
-    List<Sõiduk> sõidukid_saadaval = new ArrayList<>();
+    private List<Sõiduk> sõidukid_saadaval = new ArrayList<>();
 
     ArrayList<Sõiduk> broneeringud = new ArrayList<Sõiduk>();
 
@@ -14,6 +14,18 @@ public class Sõidukirent {
 
     public boolean kasSaadavalAuto(Sõiduk x){
         return "Auto".equals(x.getLiik());
+    }
+
+    public void lisaSõiduk(Sõiduk s){
+        sõidukid_saadaval.add(s);
+    }
+
+    public List<Sõiduk> getSõidukid_saadaval() {
+        return sõidukid_saadaval;
+    }
+
+    public ArrayList<Sõiduk> getBroneeringud() {
+        return broneeringud;
     }
 
     public boolean kasSaadavalRoller(Sõiduk x){
@@ -28,10 +40,10 @@ public class Sõidukirent {
         if (kasSaadavalAuto(x)) {
             sõidukid_saadaval.remove(x);
             broneeringud.add(x);
-
         }
-
     }
+
+    public double allahindlusArvelt(Kliendid x) {return Math.round(Math.random()*99+1)*x.getArve()/100; } //arvutab juhusliku allhindluse arvelt
 }
 
 
