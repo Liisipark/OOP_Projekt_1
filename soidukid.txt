@@ -1,0 +1,4 @@
+Auto;Audi;100;5.7;4
+Auto;Volvo;75;6.9;5
+Roller;Vespa;50;1.2
+Jalgratas;Scott;15
