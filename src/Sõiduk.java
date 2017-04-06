@@ -1,5 +1,7 @@
 /*
 *Sõidukirendist saadavate sõidukite ülemklass
+* Liisi Park
+* Helen Kask
  */
 
 abstract class Sõiduk implements Comparable<Sõiduk> {

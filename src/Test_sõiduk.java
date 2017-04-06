@@ -33,10 +33,12 @@ public class Test_sõiduk {
         Kliendid klient1 = new Kliendid("Liisi", "5677890", 200);
         Kliendid klient2 = new Kliendid("Mari", "5677891", 100);
 
-        test.broneeriAuto(auto1, klient1);
+        test.broneeriSõiduk(auto1, klient1);
         System.out.println("Arve " + klient1.getArve() + " Allahindlus arvelt " + test.allahindlusArvelt(klient1));
-        test.broneeriAuto(auto2, klient2);
+        test.broneeriSõiduk(auto2, klient2);
         System.out.println("Arve " + klient2.getArve() +  " Allahindlus arvelt " + test.allahindlusArvelt(klient2));
+
+        test.broneeriSõiduk(auto1, klient2);
 
         System.out.println(test.getSõidukid_saadaval());
         System.out.println(test.getBroneeringud());

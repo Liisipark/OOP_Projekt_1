@@ -21,6 +21,7 @@ public class Roller extends Sõiduk{
     public String toString() {
         return "Roller{" +
                 "kütuseKulu=" + kütuseKulu +
+                "rendiHind=" + getRendi_hind() +
                 '}';
     }
 }
