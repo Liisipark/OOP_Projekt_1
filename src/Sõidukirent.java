@@ -50,7 +50,7 @@ public class Sõidukirent {
         }
     }
 
-    // Meetod, mis arvutab juhusliku allhindluse arvelt
+    // Meetod, mis arvutab juhusliku allhindluse arvelt vahemikus 1-100ni
     public double allahindlusArvelt(Kliendid x) {
         return Math.round(Math.random() * 99 + 1) * x.getArve() / 100;
     }
