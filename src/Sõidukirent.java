@@ -12,7 +12,7 @@ public class Sõidukirent {
         this.asutus = asutus;
     }
 
-    // Meetod, mis kontrollib, kas rendis on mõni auto saadaval
+    // Meetod, mis kontrollib, kas tegu on autoga
     public boolean kasSaadavalAuto(Sõiduk x){
         return "Auto".equals(x.getLiik());
     }
@@ -41,10 +41,12 @@ public class Sõidukirent {
     }
 
     // Meetodi sõiduki proneerimiseks kliendi poolt juhul kui sõiduk on saadaval
-    public void broneeriAuto (Sõiduk x, Kliendid y){
-        if (kasSaadavalAuto(x)) {
+    public void broneeriSõiduk(Sõiduk x, Kliendid y) {
+        if (sõidukid_saadaval.contains(x)) {
             sõidukid_saadaval.remove(x);
             broneeringud.add(x);
+        } else {
+            System.out.println("Sõiduk ei ole saadaval!");
         }
     }
 
